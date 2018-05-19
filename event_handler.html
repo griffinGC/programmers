@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 onclick="console.log('this was clicked!');">handler 추가하기</h1>
+    <!--console.log 안에 쌍따옴표 말고 따옴표로 해야한다.보통 console.log만 사용할 경우에는 큰 따옴표를 사용한다.
+      왜냐하면 이미 console.log가 큰 따옴표 안에 들어가 있기 때문인 것 같다. 큰 따옴표 사용하면 에러뜬다.-->
+    <input type="text" onchange="console.log('changed!');" onkeydown="console.log('typed');">
+  </body>
+</html>
