@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <script>
-      var req = XMLHttpRequest();
-      req.open=("get","./data.txt");
+      var req = new XMLHttpRequest();
+      //new를 사용해서 만들면 웹서버를 구동하는것이 아니라 직접 파일에서 읽어오려고 실행하기 때문에 안됌
+      //바로가기 대상에  --disable-web-security누르면 됨
+      req.open("GET","./data.txt");
       req.send();
+      console.log(req.response);
     </script>
   </head>
   <body>

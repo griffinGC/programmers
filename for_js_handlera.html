@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html><!--js에서 이벤트 핸들러 설정-->
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
   <body>
-    <form  method="get" action="for_js_handlerb.html" id="form1">
+    <form  method="get" action="for_js_handlerb.html" id="form1"
+    onsubmit="console.log('from form'); return false;">
 
       이름 : <input type="text" name="id"><br>
       메세지 : <input type="text" name="msg"><br>
       <input type="submit">
     </form>
-    <script>
+   <script><!--여기 스크립트 문에서 앞에 onsubmit을 무시해 버림-->
       var t = document.getElementById("form1");
       t.onsubmit = function a(){
       console.log("from property");
@@ -27,10 +28,13 @@
       }
 
       t.addEventListener("submit", b);
+      //addEventListener를 사용할때는 앞에 on을 붙이지 않고 사용한다.
       t.addEventListener("submit", c);
+      //addEventListener 두개를 통해서 이벤트 a가 있는 상태에서 b,c를 추가한다.
 
       t.removeEventListener("submit",b);
-
+      //removeEventListener를 통해 이벤트를 제거한다.
     </script>
+
   </body>
 </html>
