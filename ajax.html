@@ -9,6 +9,7 @@
       req.open("GET","./data.txt");
       req.send();
       console.log(req.response);
+      //비동기로 request를 보내기 때문에 send로 보내고 바로 response에 대해 접근 할 수 없고
       //reqest에 이벤트 핸들러를 등록하여 사용해야함
     </script>
   </head>

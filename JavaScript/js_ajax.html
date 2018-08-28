@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      .character {color : black; }
+      .word {color : gray;}
+    </style>
+
+    <script>
+      var req = XMLHttpRequest();
+      req.onreadystatechange = function a(){
+        console.log(this.readystate, this.status);
+        if(this.readystate == 4){
+          console.log(this.response);
+        }
+      }
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
