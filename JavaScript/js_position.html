@@ -14,6 +14,7 @@
         console.log(document.getElementsByClassName("msg"));
       }
       check(1);
+      //위같은 경우에는 아무것도 출려되지 않는다. 스크립트가 파싱되어있지 않은 상태이기 때문이다.
     </script>
   </head>
   <body>
@@ -21,7 +22,8 @@
     <h1>Title</h1>
       <p id="songwriter"> author : griffin </p>
       <p id="songggg"> hi! hello!</p>
-      <script>check(3);</script>
+      <script>check(3);
+      //여기에서는 songwriter는 출력되지만 msg의 경우 아직 파싱되지 않았기 때문에 출려되지 않는다.</script>
       <h2>first paragraph</h2>
       <p class="msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       <script>check(4)</script>
@@ -29,4 +31,5 @@
       <p class="msg">Lorem2 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   <script>check(5);</script>
   </body>
+  <!--스크립트를 사용하기에 앞서 html의 element가  script보다 먼저 파싱이 되어 있어야 한다.-->
 </html>
