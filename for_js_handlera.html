@@ -12,7 +12,8 @@
       메세지 : <input type="text" name="msg"><br>
       <input type="submit">
     </form>
-   <script><!--여기 스크립트 문에서 앞에 onsubmit을 무시해 버림-->
+   <script>
+   // <!--여기 스크립트 문에서 앞에 onsubmit을 무시해 버림-->
       var t = document.getElementById("form1");
       t.onsubmit = function a(){
       console.log("from property");
